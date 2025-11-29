@@ -1,0 +1,79 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
+}
+
+.container {
+  flex: 1;
+}
+.main-content {
+  flex: 1;
+}
+
+/* -----------------(index.ejs)---------------- */
+
+.listing-card {
+  border: none;
+  margin-bottom: 2rem;
+}
+.card-img-top {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+.listing-card-body {
+  padding: 0 !important;
+}
+
+.listing-card-text {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  padding: 0 0.5rem;
+}
+
+@media (max-width:768px) {
+  .tax-toggle{
+    margin-bottom: 1.2rem !important;
+  }
+  .listing-link{
+    width: 90%;
+  }
+}
+
+
+/* -----------------(show.ejs)---------------- */
+
+.show-img {
+  height: 30vh;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#map {
+  height: 400px;
+  width: 90%;
+  border-radius: 1rem;
+}
+@media (max-width: 740px) {
+  #map,.show-card,.show-img{
+    width: 90%;
+  }
+}
+
+/* -----------------(edit.ejs)---------------- */
+
+.prevImg {
+  border-radius: 0.8rem;
+}
