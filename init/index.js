@@ -1,6 +1,8 @@
 if (process.env.NODE_ENV != "production") {
   require("dotenv").config();
 }
+require("dotenv").config({ path: "../.env" });
+
 const mongoose = require("mongoose");
 let { data } = require("./data");
 const Listing = require("../models/listing");
@@ -8,9 +10,7 @@ const Review = require("../models/review");
 
 //Database Connection
 // let MONGO_URL = "mongodb://127.0.0.1:27017/GharSetu";
-let MONGO_URL = process.env.MONGO_URI; 
-
-// console.log(process.env.MONGO_URI);
+let MONGO_URL = process.env.ATLASDB_URL; 
 
 main()
   .then(() => {
