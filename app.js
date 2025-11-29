@@ -30,8 +30,7 @@ app.use(express.static(path.join(__dirname, "/public/")));
 app.engine("ejs", ejsMate);
 
 //Database Connection
-let MONGO_URL = process.env.MONGO_URI;
-console.log(MONGO_URL);
+let MONGO_URL = process.env.ATLASDB_URL;
 main()
   .then(() => {
     console.log("DB connected Sucessfully");
