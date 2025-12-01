@@ -2,7 +2,6 @@ if (process.env.NODE_ENV != "production") {
   require("dotenv").config();
 }
 require("dotenv").config({ path: "../.env" });
-
 const mongoose = require("mongoose");
 let { data } = require("./data");
 const Listing = require("../models/listing");
@@ -10,7 +9,7 @@ const Review = require("../models/review");
 
 //Database Connection
 // let MONGO_URL = "mongodb://127.0.0.1:27017/GharSetu";
-let MONGO_URL = process.env.ATLASDB_URL; 
+let MONGO_URL = process.env.ATLASDB_URL;
 
 main()
   .then(() => {
@@ -26,7 +25,7 @@ async function main() {
 const initDB = async () => {
   await Listing.deleteMany({});
   await Review.deleteMany({});
-  data = data.map((obj) => ({ ...obj, owner: "67f3593df91ee60df5c5261d" }));
+  data = data.map((obj) => ({ ...obj, owner: "692d43541e5adea866f4d455" }));
   await Listing.insertMany(data);
   console.log("Data initialize Successfully");
 };
